@@ -1,0 +1,37 @@
+# Écrit par tools/versionner.mjs : à compléter à la main si besoin.
+
+# secrets et réglages locaux
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*secret*
+*credential*
+.claude/settings.local.json
+
+# dépendances, journaux, fichiers générés
+node_modules/
+*.log
+logs/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# médias lourds : ils restent dans le dossier, hors dépôt
+*.mp4
+*.mov
+*.mkv
+*.webm
+*.avi
+*.exr
+*.psd
+*.blend
+*.wav
+*.flac
+*.mp3
+*.aiff
+*.zip
+*.7z
+*.rar
+_archive/
