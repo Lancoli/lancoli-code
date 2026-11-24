@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Lancoli Code — projets et journal de bord</title>
+    <meta name="description" content="Lancoli côté code : expérience utilisateur, design et développement front. Chaque projet, à quoi il sert, comment il est fait, et le journal de bord.">
+    <meta name="author" content="Lancoli">
+    <link rel="icon" type="image/png" href="../Lancoli/favicon.png">
+    <link rel="stylesheet" href="css/code.css">
+</head>
+
+<body>
+    <main class="page">
+        <header class="top">
+            <span class="mark">Lancoli<sup>®</sup> <span class="mark-code">/code</span></span>
+            <nav class="nav" aria-label="Autres sites">
+                <a href="../Lancoli/">Galerie ↗</a>
+                <a href="../LancoliStudio/">Studio ↗</a>
+                <a href="../Lancoli/contact.html">Contact ↗</a>
+            </nav>
+        </header>
+
+        <!-- La une : une page de journal. Deux portes : les équipes tech, et ceux qui ont un site à refaire. -->
+        <section class="une" aria-labelledby="titre">
+            <div class="manchette">
+                <span>Journal de bord</span>
+                <span id="numero">N° —</span>
+                <span id="date-une"></span>
+            </div>
+            <h1 id="titre">Des sites qu’on comprend<br><em>du premier coup d’œil.</em></h1>
+            <p class="chapo" id="chapo">Expérience utilisateur, design et développement front. Chaque projet ci-dessous dit à quoi il sert, pour qui, et comment il est fait.</p>
+            <div class="portes">
+                <a class="porte" href="#t-proj">
+                    <span class="porte-pour">Équipes tech</span>
+                    <span class="porte-quoi">Les projets, les choix techniques, le journal de bord</span>
+                    <span class="porte-fleche" aria-hidden="true">↓</span>
+                </a>
+                <a class="porte porte-pleine" href="../Lancoli/contact.html">
+                    <span class="porte-pour">Collectivités, associations, commerces</span>
+                    <span class="porte-quoi">Un site à refaire, plus clair pour vos visiteurs ? Parlons-en</span>
+                    <span class="porte-fleche" aria-hidden="true">↗</span>
+                </a>
+            </div>
+            <dl class="chiffres" id="chiffres"></dl>
+        </section>
+
+        <!-- En bref : les projets classés par nature, pour trouver le bon en un regard -->
+        <section class="block" aria-labelledby="t-bref">
+            <h2 id="t-bref"><span class="num">00</span> En bref</h2>
+            <div class="sommaire" id="sommaire"></div>
+        </section>
+
+        <!-- Les projets : des fiches qui s'empilent au défilement -->
+        <section class="block" aria-labelledby="t-proj">
+            <h2 id="t-proj"><span class="num">01</span> Projets</h2>
+            <div class="pile" id="projets"></div>
+        </section>
+
+        <!-- Le parcours en carte de métro : une ligne par projet, une station par avancée datée -->
+        <section class="block" aria-labelledby="t-carte">
+            <h2 id="t-carte"><span class="num">02</span> La carte</h2>
+            <p class="intro">Une ligne par projet, une station par avancée. Les correspondances : les jours où plusieurs projets ont bougé ensemble.</p>
+            <div class="carte-cadre">
+                <div class="carte" id="carte"></div>
+                <div class="bulle-station" id="bulle-station" role="status" hidden></div>
+            </div>
+            <ol class="timeline" id="experiences"></ol>
+            <div class="cards" id="sites"></div>
+        </section>
+
+        <section class="block" aria-labelledby="t-log">
+            <h2 id="t-log"><span class="num">03</span> Journal</h2>
+            <div class="filters" id="filtres" role="group" aria-label="Filtrer par projet"></div>
+            <ol class="log" id="journal"></ol>
+        </section>
+
+        <footer class="bottom">
+            <span>Dijon · Paris · Lyon</span>
+            <a href="../Lancoli/contact.html">Passer au contact ↗</a>
+        </footer>
+    </main>
+
+    <script src="js/parcours.js"></script>
+    <script src="js/code.js"></script>
+    <!-- retours:debut --><script src="retours/retours-config.js"></script><script src="retours/retours.js" defer></script><!-- retours:fin -->
+</body>
+
+</html>
