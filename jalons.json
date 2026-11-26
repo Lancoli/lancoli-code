@@ -30,7 +30,7 @@
       "id": "auto-github",
       "texte": "N0 · sur GitHub, à jour (origin, 0 commit non poussé)",
       "pour": "github",
-      "preuve": "branche main jamais poussée",
+      "preuve": "1 commit(s) non poussé(s)",
       "fait": false,
       "auto": true
     },
@@ -48,87 +48,187 @@
       "texte": "N0 · dépôt git propre (rien en attente de commit)",
       "pour": "git",
       "preuve": "1 fichier(s) non commité(s)",
-      "fait": false,
-      "auto": true
+      "fait": true,
+      "auto": true,
+      "fait_le": "2026-11-26T22:37:57.981Z"
     }
   ],
   "etat": {
-    "date": "2026-11-26T20:05:33.774Z",
+    "date": "2026-11-26T22:58:37.547Z",
     "niveau": null,
     "prochain": "N0",
     "bloque": [
-      "git",
       "github"
     ],
     "humain": {},
     "criteres": {
       "git": {
-        "ok": false,
-        "preuve": "1 fichier(s) non commité(s)"
+        "ok": true,
+        "preuve": "propre",
+        "niveau": "N0",
+        "texte": "dépôt git propre (rien en attente de commit)",
+        "type": "auto"
       },
       "github": {
         "ok": false,
-        "preuve": "branche main jamais poussée"
+        "preuve": "1 commit(s) non poussé(s)",
+        "niveau": "N0",
+        "texte": "sur GitHub, à jour (origin, 0 commit non poussé)",
+        "type": "auto"
       },
       "readme": {
         "ok": true,
-        "preuve": "907 caractères"
+        "preuve": "907 caractères",
+        "niveau": "N0",
+        "texte": "README : ce que c'est, comment le lancer (≥ 300 caractères)",
+        "type": "auto"
       },
       "conforme": {
         "ok": true,
-        "preuve": "6 vérifications"
+        "preuve": "6 vérifications",
+        "niveau": "N0",
+        "texte": "respecte le contrat de déploiement (tools/conforme.mjs)",
+        "type": "auto"
       },
       "liens": {
         "ok": false,
-        "preuve": "9 cassé(s), ex. LancoliCode/js/parcours.js → assets/lancoli.jpg"
+        "preuve": "9 cassé(s), ex. LancoliCode/js/parcours.js → assets/lancoli.jpg",
+        "niveau": "N1",
+        "texte": "tout ce qui est cité existe (tools/liens.mjs)",
+        "type": "auto"
       },
       "console": {
         "ok": false,
-        "preuve": "2 erreur(s), ex. index.html : 404 assets/lancoli.jpg (dernier passage)"
+        "preuve": "2 erreur(s), ex. index.html : 404 assets/lancoli.jpg (dernier passage)",
+        "niveau": "N1",
+        "texte": "chaque page s'ouvre sans erreur JS ni ressource en erreur",
+        "type": "auto"
       },
       "mobile": {
         "ok": true,
-        "preuve": "1 page(s) à 375 px (dernier passage)"
+        "preuve": "1 page(s) à 375 px (dernier passage)",
+        "niveau": "N1",
+        "texte": "aucune page plus large que 375 px",
+        "type": "auto"
       },
       "remplissage": {
         "ok": true,
-        "preuve": "1 page(s)"
+        "preuve": "1 page(s)",
+        "niveau": "N1",
+        "texte": "pas de texte provisoire visible (lorem, TODO, à compléter)",
+        "type": "auto"
+      },
+      "licence": {
+        "ok": false,
+        "preuve": "LICENSE absent",
+        "niveau": "N1",
+        "texte": "licence déclarée (fichier LICENSE)",
+        "type": "auto"
+      },
+      "changelog": {
+        "ok": false,
+        "preuve": "CHANGELOG.md absent",
+        "niveau": "N1",
+        "texte": "journal des versions (CHANGELOG.md)",
+        "type": "auto"
       },
       "meta": {
         "ok": false,
-        "preuve": "1/1 page(s) incomplète(s) — index.html : og:image"
+        "preuve": "1/1 page(s) incomplète(s) — index.html : og:image",
+        "niveau": "N2",
+        "texte": "lang, title, description, viewport, favicon, og:image sur chaque page",
+        "type": "auto"
+      },
+      "robots": {
+        "ok": false,
+        "preuve": "robots.txt, sitemap.xml absent(s)",
+        "niveau": "N2",
+        "texte": "SEO technique : robots.txt et sitemap.xml",
+        "type": "auto"
+      },
+      "page404": {
+        "ok": false,
+        "preuve": "404.html absent",
+        "niveau": "N2",
+        "texte": "page d’erreur 404 soignée (404.html)",
+        "type": "auto"
+      },
+      "donnees-structurees": {
+        "ok": false,
+        "preuve": "pas de JSON-LD dans index.html",
+        "niveau": "N2",
+        "texte": "données structurées schema.org (JSON-LD) sur l’accueil",
+        "type": "auto"
       },
       "lighthouse": {
         "ok": null,
-        "preuve": "outil pas encore installé"
+        "preuve": "outil pas encore installé",
+        "niveau": "N2",
+        "texte": "Lighthouse : perf ≥ 80, bonnes pratiques ≥ 90, SEO ≥ 90",
+        "type": "auto"
       },
       "a11y": {
         "ok": null,
-        "preuve": "outil pas encore installé"
+        "preuve": "outil pas encore installé",
+        "niveau": "N2",
+        "texte": "axe-core : 0 violation serious ou critical",
+        "type": "auto"
       },
       "mentions": {
         "ok": null,
-        "preuve": "à valider par toi"
+        "preuve": "à valider par toi",
+        "niveau": "N2",
+        "texte": "mentions légales et contact",
+        "type": "humain"
       },
       "en-ligne": {
         "ok": null,
-        "preuve": "pas encore d'adresse publique"
+        "preuve": "pas encore d'adresse publique",
+        "niveau": "N2",
+        "texte": "accessible à son adresse publique (HTTP 200)",
+        "type": "auto"
       },
       "e2e": {
         "ok": null,
-        "preuve": "scénario à écrire"
+        "preuve": "scénario à écrire (champ « test » de jalons.json)",
+        "niveau": "N3",
+        "texte": "le parcours critique passe de bout en bout",
+        "type": "auto"
       },
       "audience": {
         "ok": null,
-        "preuve": "à valider par toi"
+        "preuve": "à valider par toi",
+        "niveau": "N3",
+        "texte": "mesure d'audience respectueuse branchée",
+        "type": "humain"
       },
       "surveillance": {
         "ok": null,
-        "preuve": "à valider par toi"
+        "preuve": "à valider par toi",
+        "niveau": "N3",
+        "texte": "on est prévenu si le site tombe",
+        "type": "humain"
+      },
+      "securite": {
+        "ok": null,
+        "preuve": "à valider par toi",
+        "niveau": "N3",
+        "texte": "en-têtes de sécurité (CSP, HSTS), dépendances sans faille connue",
+        "type": "humain"
+      },
+      "rgpd": {
+        "ok": null,
+        "preuve": "à valider par toi",
+        "niveau": "N3",
+        "texte": "RGPD : consentement, données personnelles listées, droit d’effacement",
+        "type": "humain"
       },
       "sauvegarde": {
         "ok": null,
-        "preuve": "à valider par toi"
+        "preuve": "à valider par toi",
+        "niveau": "N3",
+        "texte": "données sauvegardées, restauration testée",
+        "type": "humain"
       }
     }
   }
