@@ -39,17 +39,17 @@
       "texte": "N0 · README : ce que c'est, comment le lancer (≥ 300 caractères)",
       "pour": "readme",
       "preuve": "README.md absent",
-      "fait": false,
-      "auto": true
+      "fait": true,
+      "auto": true,
+      "fait_le": "2026-11-26T18:20:20.713Z"
     }
   ],
   "etat": {
-    "date": "2026-11-26T18:18:25.475Z",
+    "date": "2026-11-26T18:20:20.713Z",
     "niveau": null,
     "prochain": "N0",
     "bloque": [
-      "github",
-      "readme"
+      "github"
     ],
     "humain": {},
     "criteres": {
@@ -62,8 +62,8 @@
         "preuve": "pas de remote origin"
       },
       "readme": {
-        "ok": false,
-        "preuve": "README.md absent"
+        "ok": true,
+        "preuve": "835 caractères"
       },
       "conforme": {
         "ok": true,
@@ -74,12 +74,12 @@
         "preuve": "9 cassé(s), ex. LancoliCode/js/parcours.js → assets/lancoli.jpg"
       },
       "console": {
-        "ok": null,
-        "preuve": "navigateur non lancé"
+        "ok": false,
+        "preuve": "2 erreur(s), ex. index.html : 404 assets/lancoli.jpg"
       },
       "mobile": {
-        "ok": null,
-        "preuve": "navigateur non lancé"
+        "ok": true,
+        "preuve": "1 page(s) à 375 px"
       },
       "remplissage": {
         "ok": true,
