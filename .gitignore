@@ -35,3 +35,10 @@ desktop.ini
 *.7z
 *.rar
 _archive/
+
+# secrets : jamais dans un dépôt (docs/COMMITS.md, règle 4)
+*.p12
+*.pfx
+id_rsa*
+retours-config.js
+supabase.json
