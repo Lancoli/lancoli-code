@@ -12,76 +12,79 @@
 </head>
 
 <body>
+    <!-- Interface text: i18n/fr.json (default) and i18n/en.json, applied by js/i18n.js; the French written here is the no-JS fallback. -->
     <main class="page">
         <header class="top">
             <span class="mark">Lancoli<sup>®</sup> <span class="mark-code">/code</span></span>
-            <nav class="nav" aria-label="Autres sites">
-                <a href="../Lancoli/">Galerie ↗</a>
-                <a href="../LancoliStudio/">Studio ↗</a>
-                <a href="../Lancoli/contact.html">Contact ↗</a>
+            <nav class="nav" aria-label="Autres sites" data-i18n-attr="aria-label:nav.label">
+                <a href="../Lancoli/" data-i18n="nav.gallery">Galerie ↗</a>
+                <a href="../LancoliStudio/" data-i18n="nav.studio">Studio ↗</a>
+                <a href="../Lancoli/contact.html" data-i18n="nav.contact">Contact ↗</a>
+                <button type="button" class="lang-switch" id="lang-switch" lang="en">English</button>
             </nav>
         </header>
 
-        <!-- La une : une page de journal. Deux portes : les équipes tech, et ceux qui ont un site à refaire. -->
-        <section class="une" aria-labelledby="titre">
-            <div class="manchette">
-                <span>Journal de bord</span>
-                <span id="numero">N° —</span>
-                <span id="date-une"></span>
+        <!-- Front page: a newspaper page. Two doors: tech teams, and people who have a website to redo. -->
+        <section class="front" aria-labelledby="title">
+            <div class="masthead">
+                <span data-i18n="front.masthead">Journal de bord</span>
+                <span id="issue-number">N° —</span>
+                <span id="front-date"></span>
             </div>
-            <h1 id="titre">Des sites qu’on comprend<br><em>du premier coup d’œil.</em></h1>
-            <p class="chapo" id="chapo">Expérience utilisateur, design et développement front. Chaque projet ci-dessous dit à quoi il sert, pour qui, et comment il est fait.</p>
-            <div class="portes">
-                <a class="porte" href="#t-proj">
-                    <span class="porte-pour">Équipes tech</span>
-                    <span class="porte-quoi">Les projets, les choix techniques, le journal de bord</span>
-                    <span class="porte-fleche" aria-hidden="true">↓</span>
+            <h1 id="title"><span data-i18n="front.title.1">Des sites qu’on comprend</span><br><em data-i18n="front.title.2">du premier coup d’œil.</em></h1>
+            <p class="standfirst" id="standfirst" data-i18n="front.standfirst">Expérience utilisateur, design et développement front. Chaque projet ci-dessous dit à quoi il sert, pour qui, et comment il est fait.</p>
+            <div class="doors">
+                <a class="door" href="#t-proj">
+                    <span class="door-for" data-i18n="door.tech.for">Équipes tech</span>
+                    <span class="door-what" data-i18n="door.tech.what">Les projets, les choix techniques, le journal de bord</span>
+                    <span class="door-arrow" aria-hidden="true">↓</span>
                 </a>
-                <a class="porte porte-pleine" href="../Lancoli/contact.html">
-                    <span class="porte-pour">Collectivités, associations, commerces</span>
-                    <span class="porte-quoi">Un site à refaire, plus clair pour vos visiteurs ? Parlons-en</span>
-                    <span class="porte-fleche" aria-hidden="true">↗</span>
+                <a class="door door-filled" href="../Lancoli/contact.html">
+                    <span class="door-for" data-i18n="door.civic.for">Collectivités, associations, commerces</span>
+                    <span class="door-what" data-i18n="door.civic.what">Un site à refaire, plus clair pour vos visiteurs ? Parlons-en</span>
+                    <span class="door-arrow" aria-hidden="true">↗</span>
                 </a>
             </div>
-            <dl class="chiffres" id="chiffres"></dl>
+            <dl class="figures" id="figures"></dl>
         </section>
 
-        <!-- En bref : les projets classés par nature, pour trouver le bon en un regard -->
-        <section class="block" aria-labelledby="t-bref">
-            <h2 id="t-bref"><span class="num">00</span> En bref</h2>
-            <div class="sommaire" id="sommaire"></div>
+        <!-- At a glance: projects grouped by kind, to find the right one in one look -->
+        <section class="block" aria-labelledby="t-brief">
+            <h2 id="t-brief"><span class="num">00</span> <span data-i18n="section.brief">En bref</span></h2>
+            <div class="summary" id="summary"></div>
         </section>
 
-        <!-- Les projets : des fiches qui s'empilent au défilement -->
+        <!-- Projects: cards that stack up while scrolling -->
         <section class="block" aria-labelledby="t-proj">
-            <h2 id="t-proj"><span class="num">01</span> Projets</h2>
-            <div class="pile" id="projets"></div>
+            <h2 id="t-proj"><span class="num">01</span> <span data-i18n="section.projects">Projets</span></h2>
+            <div class="stack" id="projects"></div>
         </section>
 
-        <!-- Le parcours en carte de métro : une ligne par projet, une station par avancée datée -->
-        <section class="block" aria-labelledby="t-carte">
-            <h2 id="t-carte"><span class="num">02</span> La carte</h2>
-            <p class="intro">Une ligne par projet, une station par avancée. Les correspondances : les jours où plusieurs projets ont bougé ensemble.</p>
-            <div class="carte-cadre">
-                <div class="carte" id="carte"></div>
-                <div class="bulle-station" id="bulle-station" role="status" hidden></div>
+        <!-- The path as a metro map: one line per project, one station per dated step -->
+        <section class="block" aria-labelledby="t-map">
+            <h2 id="t-map"><span class="num">02</span> <span data-i18n="section.map">La carte</span></h2>
+            <p class="intro" data-i18n="map.intro">Une ligne par projet, une station par avancée. Les correspondances : les jours où plusieurs projets ont bougé ensemble.</p>
+            <div class="map-frame">
+                <div class="map" id="map"></div>
+                <div class="station-bubble" id="station-bubble" role="status" hidden></div>
             </div>
             <ol class="timeline" id="experiences"></ol>
             <div class="cards" id="sites"></div>
         </section>
 
         <section class="block" aria-labelledby="t-log">
-            <h2 id="t-log"><span class="num">03</span> Journal</h2>
-            <div class="filters" id="filtres" role="group" aria-label="Filtrer par projet"></div>
+            <h2 id="t-log"><span class="num">03</span> <span data-i18n="section.log">Journal</span></h2>
+            <div class="filters" id="filters-bar" role="group" aria-label="Filtrer par projet" data-i18n-attr="aria-label:filters.label"></div>
             <ol class="log" id="journal"></ol>
         </section>
 
         <footer class="bottom">
             <span>Dijon · Paris · Lyon</span>
-            <a href="../Lancoli/contact.html">Passer au contact ↗</a>
+            <a href="../Lancoli/contact.html" data-i18n="footer.contact">Passer au contact ↗</a>
         </footer>
     </main>
 
+    <script src="js/i18n.js"></script>
     <script src="js/journey.js"></script>
     <script src="js/code.js"></script>
     <!-- retours:debut --><script src="retours/retours-config.js"></script><script src="retours/retours.js" defer></script><!-- retours:fin -->
