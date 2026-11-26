@@ -6,18 +6,25 @@
 
 > Personal tech portfolio: a library of technically oriented projects.
 
-Lancoli côté code : expérience utilisateur, design et développement front. Une page qui présente chaque projet du portfolio
-(à quoi il sert, comment il est fait) et le journal de bord. Elle sert de vitrine pour l'emploi et pour les clients web.
+Lancoli on the code side: user experience, design and front-end development. A page that presents each portfolio project
+(what it is for, how it is built) and the logbook. It is the showcase for jobs and for web clients. French by default,
+English one click away (`?lang=en`).
 
-## Lancer
+## Run
 
-Site statique, sans étape de construction.
+Static site, no build step.
 
-- **Avec tout le portfolio** : `lancer.cmd` à la racine du portfolio, puis http://localhost:4101/LancoliCode/
-- **Dans Docker** (comme en ligne) : `lancer docker`, puis http://localhost:8080/LancoliCode/
-- **Seul** : n'importe quel serveur statique ouvert dans ce dossier (les chemins sont relatifs).
+- **With the whole portfolio**: `lancer.cmd` at the portfolio root, then http://localhost:4101/LancoliCode/
+- **In Docker** (as online): `lancer docker`, then http://localhost:8080/LancoliCode/
+- **Alone**: any static server opened in this folder (paths are relative; the dictionaries need http, not file://).
 
-## Qualité
+## Update the content
 
-Ce projet suit les jalons du portfolio (`docs/JALONS.md` à la racine) : ses objectifs et son état sont dans `jalons.json`.
-Vérification : `node tools/jalons.mjs LancoliCode` depuis la racine du portfolio.
+- Projects and log entries: `js/journey.js`, each text as `{ fr, en }`.
+- Interface text: `i18n/fr.json` and `i18n/en.json` (same keys in both).
+- Project screenshots: `node tools/capture-projects.js` writes `assets/<id>.jpg`.
+
+## Quality
+
+This project follows the portfolio milestones (`docs/JALONS.md` at the root): its goals and state are in `jalons.json`.
+Check: `node tools/jalons.mjs LancoliCode` from the portfolio root.

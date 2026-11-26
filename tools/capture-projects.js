@@ -1,70 +1,71 @@
-// Script pour capturer automatiquement les écrans de tous les projets du portfolio
-// Utilise Playwright pour ouvrir chaque projet et faire une capture
+// Captures a screenshot of every portfolio project into assets/<id>.jpg (the images of the project cards).
+// Uses Playwright to open each project and take a capture. Run from LancoliCode/: node tools/capture-projects.js
+// (HAL must be serving the sites on port 4101, and Jondi on 4021).
 
 const { chromium } = require('playwright');
 const fs = require('fs/promises');
 const path = require('path');
 
-// Les projets à capturer, avec leurs URLs locales (via Hal sur le port 4101)
+// The projects to capture, with their local URLs (through HAL on port 4101)
 const captures = [
-  { nom: 'lancoli', url: 'http://localhost:4101/Lancoli/', viewport: { width: 1600, height: 900 } },
-  { nom: 'studio', url: 'http://localhost:4101/LancoliStudio/', viewport: { width: 1600, height: 900 } },
-  { nom: 'jondi', url: 'http://localhost:4021/', viewport: { width: 1600, height: 900 } },
-  { nom: 'jardin', url: 'http://localhost:4101/JardinDeDemain/temps-au-jardin.html', viewport: { width: 1600, height: 900 } },
-  { nom: 'survie', url: 'http://localhost:4101/Prototypes/calculateur-survie-alimentaire.html', viewport: { width: 1600, height: 900 } },
-  { nom: 'archive', url: 'http://localhost:4101/ArchiveBotanique/', viewport: { width: 1600, height: 900 } },
-  { nom: 'code', url: 'http://localhost:4101/LancoliCode/', viewport: { width: 1600, height: 900 } },
+  { name: 'lancoli', url: 'http://localhost:4101/Lancoli/', viewport: { width: 1600, height: 900 } },
+  { name: 'studio', url: 'http://localhost:4101/LancoliStudio/', viewport: { width: 1600, height: 900 } },
+  { name: 'jondi', url: 'http://localhost:4021/', viewport: { width: 1600, height: 900 } },
+  { name: 'jardin', url: 'http://localhost:4101/JardinDeDemain/temps-au-jardin.html', viewport: { width: 1600, height: 900 } },
+  { name: 'survie', url: 'http://localhost:4101/Prototypes/calculateur-survie-alimentaire.html', viewport: { width: 1600, height: 900 } },
+  { name: 'archive', url: 'http://localhost:4101/ArchiveBotanique/', viewport: { width: 1600, height: 900 } },
+  { name: 'code', url: 'http://localhost:4101/LancoliCode/', viewport: { width: 1600, height: 900 } },
 ];
 
-async function capturerProjets() {
-  console.log('🎬 Lancement des captures...\n');
+async function captureProjects() {
+  console.log('🎬 Starting captures...\n');
 
   const browser = await chromium.launch({ headless: true });
-  const dossierAssets = path.join(__dirname, '..', 'assets');
+  const assetsDir = path.join(__dirname, '..', 'assets');
 
-  // Vérifier que le dossier assets existe
+  // Check that the assets folder exists
   try {
-    await fs.access(dossierAssets);
+    await fs.access(assetsDir);
   } catch {
-    console.error(`❌ Le dossier assets n'existe pas : ${dossierAssets}`);
+    console.error(`❌ The assets folder does not exist: ${assetsDir}`);
     await browser.close();
     return;
   }
 
-  let reussies = 0;
-  let echouees = 0;
+  let succeeded = 0;
+  let failed = 0;
 
-  for (const projet of captures) {
-    const page = await browser.newPage({ viewport: projet.viewport });
-    const fichier = path.join(dossierAssets, `${projet.nom}.jpg`);
+  for (const project of captures) {
+    const page = await browser.newPage({ viewport: project.viewport });
+    const file = path.join(assetsDir, `${project.name}.jpg`);
 
     try {
-      console.log(`📸 Capture de ${projet.nom}...`);
-      console.log(`   URL : ${projet.url}`);
+      console.log(`📸 Capturing ${project.name}...`);
+      console.log(`   URL: ${project.url}`);
 
-      // Charger la page avec un timeout de 30s
-      await page.goto(projet.url, { waitUntil: 'networkidle', timeout: 30000 });
+      // Load the page with a 30 s timeout
+      await page.goto(project.url, { waitUntil: 'networkidle', timeout: 30000 });
 
-      // Attendre un peu pour que les animations se terminent
+      // Wait a little for the animations to finish
       await page.waitForTimeout(1500);
 
-      // Prendre la capture en JPEG avec qualité 85
+      // Take the capture as JPEG, quality 85
       await page.screenshot({
-        path: fichier,
+        path: file,
         type: 'jpeg',
         quality: 85,
         fullPage: false,
       });
 
-      // Vérifier la taille du fichier
-      const stats = await fs.stat(fichier);
-      const tailleKo = Math.round(stats.size / 1024);
-      console.log(`   ✓ ${projet.nom}.jpg créé (${tailleKo} Ko)\n`);
-      reussies++;
+      // Check the file size
+      const stats = await fs.stat(file);
+      const sizeKb = Math.round(stats.size / 1024);
+      console.log(`   ✓ ${project.name}.jpg written (${sizeKb} KB)\n`);
+      succeeded++;
 
     } catch (err) {
-      console.error(`   ✗ Échec pour ${projet.nom} : ${err.message}\n`);
-      echouees++;
+      console.error(`   ✗ Failed for ${project.name}: ${err.message}\n`);
+      failed++;
     } finally {
       await page.close();
     }
@@ -72,14 +73,14 @@ async function capturerProjets() {
 
   await browser.close();
 
-  console.log(`\n✨ Terminé : ${reussies} capture${reussies > 1 ? 's' : ''} réussie${reussies > 1 ? 's' : ''}`);
-  if (echouees > 0) {
-    console.log(`⚠️  ${echouees} échec${echouees > 1 ? 's' : ''}`);
+  console.log(`\n✨ Done: ${succeeded} capture${succeeded > 1 ? 's' : ''} succeeded`);
+  if (failed > 0) {
+    console.log(`⚠️  ${failed} failure${failed > 1 ? 's' : ''}`);
   }
 }
 
-// Lancer les captures
-capturerProjets().catch((err) => {
-  console.error('❌ Erreur fatale :', err);
+// Run the captures
+captureProjects().catch((err) => {
+  console.error('❌ Fatal error:', err);
   process.exit(1);
 });

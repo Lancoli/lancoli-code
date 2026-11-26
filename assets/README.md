@@ -1,22 +1,22 @@
-# Images des projets
+# Project images
 
-Ce dossier contient les captures d'écran des projets affichées dans les fiches.
+This folder holds the project screenshots shown on the cards. They are generated: `node tools/capture-projects.js`.
 
-## Fichiers attendus
+## Expected files
 
-- `lancoli.jpg` : Capture du site Lancoli
-- `studio.jpg` : Capture de Lancoli Studio
-- `jondi.jpg` : Capture de Jondi ça bouge
-- `jardin.jpg` : Capture de Jardin de demain
-- `survie.jpg` : Capture de Survie alimentaire
-- `archive.jpg` : Capture d'Archive Botanique
-- `hal.jpg` : Capture de Hal
-- `code.jpg` : Capture de Lancoli Code
-- `infra.jpg` : Schéma ou capture de l'infrastructure
+- `lancoli.jpg`: Lancoli website
+- `studio.jpg`: Lancoli Studio
+- `jondi.jpg`: Jondi ça bouge
+- `jardin.jpg`: Jardin de demain
+- `survie.jpg`: Food survival
+- `archive.jpg`: Archive Botanique
+- `hal.jpg`: Hal
+- `code.jpg`: Lancoli Code
+- `infra.jpg`: diagram or capture of the infrastructure
 
-## Format recommandé
+## Recommended format
 
-- Format : JPEG ou WebP
-- Dimensions : environ 1600×900px (ratio 16:9)
-- Poids : < 200 Ko par image
-- Style : captures d'écran réelles des projets, avec un effet photographique naturel
+- Format: JPEG or WebP
+- Size: about 1600×900 px (16:9)
+- Weight: < 200 KB per image
+- Style: real screenshots of the projects, with a natural photographic feel
