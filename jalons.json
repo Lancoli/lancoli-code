@@ -30,7 +30,7 @@
       "id": "auto-github",
       "texte": "N0 · sur GitHub, à jour (origin, 0 commit non poussé)",
       "pour": "github",
-      "preuve": "pas de remote origin",
+      "preuve": "branche main jamais poussée",
       "fait": false,
       "auto": true
     },
@@ -42,28 +42,37 @@
       "fait": true,
       "auto": true,
       "fait_le": "2026-11-26T18:20:20.713Z"
+    },
+    {
+      "id": "auto-git",
+      "texte": "N0 · dépôt git propre (rien en attente de commit)",
+      "pour": "git",
+      "preuve": "1 fichier(s) non commité(s)",
+      "fait": false,
+      "auto": true
     }
   ],
   "etat": {
-    "date": "2026-11-26T18:20:20.713Z",
+    "date": "2026-11-26T20:05:33.774Z",
     "niveau": null,
     "prochain": "N0",
     "bloque": [
+      "git",
       "github"
     ],
     "humain": {},
     "criteres": {
       "git": {
-        "ok": true,
-        "preuve": "propre"
+        "ok": false,
+        "preuve": "1 fichier(s) non commité(s)"
       },
       "github": {
         "ok": false,
-        "preuve": "pas de remote origin"
+        "preuve": "branche main jamais poussée"
       },
       "readme": {
         "ok": true,
-        "preuve": "835 caractères"
+        "preuve": "907 caractères"
       },
       "conforme": {
         "ok": true,
@@ -75,11 +84,11 @@
       },
       "console": {
         "ok": false,
-        "preuve": "2 erreur(s), ex. index.html : 404 assets/lancoli.jpg"
+        "preuve": "2 erreur(s), ex. index.html : 404 assets/lancoli.jpg (dernier passage)"
       },
       "mobile": {
         "ok": true,
-        "preuve": "1 page(s) à 375 px"
+        "preuve": "1 page(s) à 375 px (dernier passage)"
       },
       "remplissage": {
         "ok": true,
