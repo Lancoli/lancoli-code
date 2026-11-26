@@ -1,5 +1,9 @@
 # Lancoli Code
 
+<!-- badges : généré par tools/kit-github.mjs -->
+[![qualité](https://github.com/Lancoli/lancoli-code/actions/workflows/qualite.yml/badge.svg)](https://github.com/Lancoli/lancoli-code/actions/workflows/qualite.yml) [![release](https://img.shields.io/github/v/release/Lancoli/lancoli-code?include_prereleases&label=version)](https://github.com/Lancoli/lancoli-code/releases) [![Conventional Commits](https://img.shields.io/badge/commits-conventionnels%20%2B%20gitmoji-ff69b4)](https://www.conventionalcommits.org/fr/) [![dernier commit](https://img.shields.io/github/last-commit/Lancoli/lancoli-code)](https://github.com/Lancoli/lancoli-code/commits)
+<!-- /badges -->
+
 > Personal tech portfolio: a library of technically oriented projects.
 
 Lancoli côté code : expérience utilisateur, design et développement front. Une page qui présente chaque projet du portfolio
