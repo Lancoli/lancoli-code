@@ -1,0 +1,126 @@
+{
+  "projet": "LancoliCode",
+  "but": "Montrer mes projets de développement, pour l'emploi et les clients web.",
+  "cibles": [
+    {
+      "id": "horizon",
+      "niveau": "N2",
+      "texte": "À PRÉCISER : horizon non tranché le 26/11",
+      "decide": "à préciser"
+    }
+  ],
+  "jalons": [
+    {
+      "niveau": "N0",
+      "horizon": "2026-11-27",
+      "decide": "proposé",
+      "ouvert": true
+    },
+    {
+      "niveau": "N1",
+      "horizon": "2026-12-20",
+      "decide": "proposé",
+      "ouvert": false
+    }
+  ],
+  "criteres": [],
+  "exceptions": [],
+  "todo": [
+    {
+      "id": "auto-github",
+      "texte": "N0 · sur GitHub, à jour (origin, 0 commit non poussé)",
+      "pour": "github",
+      "preuve": "pas de remote origin",
+      "fait": false,
+      "auto": true
+    },
+    {
+      "id": "auto-readme",
+      "texte": "N0 · README : ce que c'est, comment le lancer (≥ 300 caractères)",
+      "pour": "readme",
+      "preuve": "README.md absent",
+      "fait": false,
+      "auto": true
+    }
+  ],
+  "etat": {
+    "date": "2026-11-26T18:18:25.475Z",
+    "niveau": null,
+    "prochain": "N0",
+    "bloque": [
+      "github",
+      "readme"
+    ],
+    "humain": {},
+    "criteres": {
+      "git": {
+        "ok": true,
+        "preuve": "propre"
+      },
+      "github": {
+        "ok": false,
+        "preuve": "pas de remote origin"
+      },
+      "readme": {
+        "ok": false,
+        "preuve": "README.md absent"
+      },
+      "conforme": {
+        "ok": true,
+        "preuve": "6 vérifications"
+      },
+      "liens": {
+        "ok": false,
+        "preuve": "9 cassé(s), ex. LancoliCode/js/parcours.js → assets/lancoli.jpg"
+      },
+      "console": {
+        "ok": null,
+        "preuve": "navigateur non lancé"
+      },
+      "mobile": {
+        "ok": null,
+        "preuve": "navigateur non lancé"
+      },
+      "remplissage": {
+        "ok": true,
+        "preuve": "1 page(s)"
+      },
+      "meta": {
+        "ok": false,
+        "preuve": "1/1 page(s) incomplète(s) — index.html : og:image"
+      },
+      "lighthouse": {
+        "ok": null,
+        "preuve": "outil pas encore installé"
+      },
+      "a11y": {
+        "ok": null,
+        "preuve": "outil pas encore installé"
+      },
+      "mentions": {
+        "ok": null,
+        "preuve": "à valider par toi"
+      },
+      "en-ligne": {
+        "ok": null,
+        "preuve": "pas encore d'adresse publique"
+      },
+      "e2e": {
+        "ok": null,
+        "preuve": "scénario à écrire"
+      },
+      "audience": {
+        "ok": null,
+        "preuve": "à valider par toi"
+      },
+      "surveillance": {
+        "ok": null,
+        "preuve": "à valider par toi"
+      },
+      "sauvegarde": {
+        "ok": null,
+        "preuve": "à valider par toi"
+      }
+    }
+  }
+}
