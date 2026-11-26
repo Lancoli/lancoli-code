@@ -1,5 +1,7 @@
 # Lancoli Code
 
+> Personal tech portfolio: a library of technically oriented projects.
+
 Lancoli côté code : expérience utilisateur, design et développement front. Une page qui présente chaque projet du portfolio
 (à quoi il sert, comment il est fait) et le journal de bord. Elle sert de vitrine pour l'emploi et pour les clients web.
 
