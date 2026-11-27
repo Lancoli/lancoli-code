@@ -96,7 +96,7 @@ h1 em { color: var(--accent) }
     gap: 4px 16px;
     padding: 20px 22px;
     border: 1px solid var(--line);
-    border-radius: 14px;
+    border-radius: 12px;
     background: var(--sheet);
     text-decoration: none;
     transition: border-color .25s, background-color .25s;
@@ -137,7 +137,7 @@ h1 em { color: var(--accent) }
     padding: 26px 30px 30px;
     border: 1px solid var(--line);
     border-top: 6px solid var(--c);
-    border-radius: 18px;
+    border-radius: 20px;
     background: var(--sheet);
     box-shadow: 0 -14px 34px -22px rgba(0, 0, 0, .45), 0 26px 50px -38px rgba(0, 0, 0, .5);
     scroll-margin-top: 24px;
@@ -186,7 +186,7 @@ a.project-card-status:hover, a.project-card-status:focus-visible { border-color:
     max-width: 300px;
     padding: 10px 12px;
     border-left: 4px solid var(--c);
-    border-radius: 6px;
+    border-radius: 8px;
     background: var(--ink);
     color: var(--paper);
     font-size: 13px;
@@ -238,7 +238,7 @@ h3 { margin: 0; font-size: 18px; letter-spacing: -.01em }
     gap: 8px;
     padding: 20px;
     border: 1px solid var(--line);
-    border-radius: 14px;
+    border-radius: 12px;
     background: var(--card);
     text-decoration: none;
     transition: border-color .3s;
