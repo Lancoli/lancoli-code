@@ -31,8 +31,9 @@
       "texte": "N0 · sur GitHub, à jour (origin, 0 commit non poussé)",
       "pour": "github",
       "preuve": "1 commit(s) non poussé(s)",
-      "fait": false,
-      "auto": true
+      "fait": true,
+      "auto": true,
+      "fait_le": "2026-11-27T00:44:14.627Z"
     },
     {
       "id": "auto-readme",
@@ -51,14 +52,49 @@
       "fait": true,
       "auto": true,
       "fait_le": "2026-11-26T22:37:57.981Z"
+    },
+    {
+      "id": "auto-liens",
+      "texte": "N1 · tout ce qui est cité existe (tools/liens.mjs)",
+      "pour": "liens",
+      "preuve": "9 cassé(s), ex. LancoliCode/js/journey.js → assets/lancoli.jpg",
+      "fait": false,
+      "auto": true
+    },
+    {
+      "id": "auto-console",
+      "texte": "N1 · chaque page s'ouvre sans erreur JS ni ressource en erreur",
+      "pour": "console",
+      "preuve": "2 erreur(s), ex. index.html : 404 assets/lancoli.jpg (dernier passage)",
+      "fait": false,
+      "auto": true
+    },
+    {
+      "id": "auto-licence",
+      "texte": "N1 · licence déclarée (fichier LICENSE)",
+      "pour": "licence",
+      "preuve": "LICENSE absent",
+      "fait": false,
+      "auto": true
+    },
+    {
+      "id": "auto-changelog",
+      "texte": "N1 · journal des versions (CHANGELOG.md)",
+      "pour": "changelog",
+      "preuve": "CHANGELOG.md absent",
+      "fait": false,
+      "auto": true
     }
   ],
   "etat": {
-    "date": "2026-11-26T22:58:37.547Z",
-    "niveau": null,
-    "prochain": "N0",
+    "date": "2026-11-27T00:44:14.627Z",
+    "niveau": "N0",
+    "prochain": "N1",
     "bloque": [
-      "github"
+      "liens",
+      "console",
+      "licence",
+      "changelog"
     ],
     "humain": {},
     "criteres": {
@@ -70,15 +106,15 @@
         "type": "auto"
       },
       "github": {
-        "ok": false,
-        "preuve": "1 commit(s) non poussé(s)",
+        "ok": true,
+        "preuve": "Lancoli/lancoli-code.git",
         "niveau": "N0",
         "texte": "sur GitHub, à jour (origin, 0 commit non poussé)",
         "type": "auto"
       },
       "readme": {
         "ok": true,
-        "preuve": "907 caractères",
+        "preuve": "1832 caractères",
         "niveau": "N0",
         "texte": "README : ce que c'est, comment le lancer (≥ 300 caractères)",
         "type": "auto"
@@ -92,7 +128,7 @@
       },
       "liens": {
         "ok": false,
-        "preuve": "9 cassé(s), ex. LancoliCode/js/parcours.js → assets/lancoli.jpg",
+        "preuve": "9 cassé(s), ex. LancoliCode/js/journey.js → assets/lancoli.jpg",
         "niveau": "N1",
         "texte": "tout ce qui est cité existe (tools/liens.mjs)",
         "type": "auto"
