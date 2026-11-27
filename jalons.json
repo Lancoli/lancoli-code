@@ -33,7 +33,7 @@
       "preuve": "1 commit(s) non poussé(s)",
       "fait": true,
       "auto": true,
-      "fait_le": "2026-11-27T00:44:14.627Z"
+      "fait_le": "2026-11-27T04:17:11.643Z"
     },
     {
       "id": "auto-readme",
@@ -49,7 +49,7 @@
       "texte": "N0 · dépôt git propre (rien en attente de commit)",
       "pour": "git",
       "preuve": "1 fichier(s) non commité(s)",
-      "fait": true,
+      "fait": false,
       "auto": true,
       "fait_le": "2026-11-26T22:37:57.981Z"
     },
@@ -74,33 +74,32 @@
       "texte": "N1 · licence déclarée (fichier LICENSE)",
       "pour": "licence",
       "preuve": "LICENSE absent",
-      "fait": false,
-      "auto": true
+      "fait": true,
+      "auto": true,
+      "fait_le": "2026-11-27T03:37:35.486Z"
     },
     {
       "id": "auto-changelog",
       "texte": "N1 · journal des versions (CHANGELOG.md)",
       "pour": "changelog",
       "preuve": "CHANGELOG.md absent",
-      "fait": false,
-      "auto": true
+      "fait": true,
+      "auto": true,
+      "fait_le": "2026-11-27T03:37:35.486Z"
     }
   ],
   "etat": {
-    "date": "2026-11-27T00:44:14.627Z",
-    "niveau": "N0",
-    "prochain": "N1",
+    "date": "2026-11-27T04:17:11.643Z",
+    "niveau": null,
+    "prochain": "N0",
     "bloque": [
-      "liens",
-      "console",
-      "licence",
-      "changelog"
+      "git"
     ],
     "humain": {},
     "criteres": {
       "git": {
-        "ok": true,
-        "preuve": "propre",
+        "ok": false,
+        "preuve": "1 fichier(s) non commité(s)",
         "niveau": "N0",
         "texte": "dépôt git propre (rien en attente de commit)",
         "type": "auto"
@@ -135,14 +134,14 @@
       },
       "console": {
         "ok": false,
-        "preuve": "2 erreur(s), ex. index.html : 404 assets/lancoli.jpg (dernier passage)",
+        "preuve": "2 erreur(s), ex. index.html : 404 assets/lancoli.jpg",
         "niveau": "N1",
         "texte": "chaque page s'ouvre sans erreur JS ni ressource en erreur",
         "type": "auto"
       },
       "mobile": {
         "ok": true,
-        "preuve": "1 page(s) à 375 px (dernier passage)",
+        "preuve": "1 page(s) à 375 px",
         "niveau": "N1",
         "texte": "aucune page plus large que 375 px",
         "type": "auto"
@@ -155,15 +154,15 @@
         "type": "auto"
       },
       "licence": {
-        "ok": false,
-        "preuve": "LICENSE absent",
+        "ok": true,
+        "preuve": "LICENSE",
         "niveau": "N1",
         "texte": "licence déclarée (fichier LICENSE)",
         "type": "auto"
       },
       "changelog": {
-        "ok": false,
-        "preuve": "CHANGELOG.md absent",
+        "ok": true,
+        "preuve": "CHANGELOG.md",
         "niveau": "N1",
         "texte": "journal des versions (CHANGELOG.md)",
         "type": "auto"
