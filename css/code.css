@@ -99,7 +99,7 @@ h1 em { color: var(--accent) }
     border-radius: 12px;
     background: var(--sheet);
     text-decoration: none;
-    transition: border-color .25s, background-color .25s;
+    transition: border-color 280ms, background-color 280ms;
 }
 .door:hover, .door:focus-visible { border-color: var(--accent); outline: none }
 .door-for { font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--accent) }
@@ -141,16 +141,16 @@ h1 em { color: var(--accent) }
     background: var(--sheet);
     box-shadow: 0 -16px 32px -24px rgba(0, 0, 0, .45), 0 24px 48px -32px rgba(0, 0, 0, .5);
     scroll-margin-top: 24px;
-    transition: border-color .25s;
+    transition: border-color 280ms;
 }
 .project-card:hover { border-color: color-mix(in srgb, var(--c) 55%, var(--line)); border-top-color: var(--c) }
 .project-card.is-pending { opacity: 0; translate: 0 48px; scale: .97 }
-.project-card.is-pending.is-seen { opacity: 1; translate: 0 0; scale: 1; transition: opacity .8s var(--ease-out), translate .8s var(--ease-out), scale .8s var(--ease-out), border-color .25s }
+.project-card.is-pending.is-seen { opacity: 1; translate: 0 0; scale: 1; transition: opacity 280ms var(--ease-out), translate 280ms var(--ease-out), scale 280ms var(--ease-out), border-color 280ms }
 .project-card-head { grid-column: 1 / -1; display: flex; align-items: baseline; gap: 16px; font-family: var(--mono); font-size: 12px; color: var(--muted) }
 .project-card-num { color: var(--c); font-size: 14px }
 .project-card-kind { text-transform: uppercase; letter-spacing: .08em }
 .project-card-status { margin-left: auto; text-decoration: none }
-a.project-card-status { color: var(--ink); padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; transition: border-color .2s, color .2s }
+a.project-card-status { color: var(--ink); padding: 8px 12px; border: 1px solid var(--line); border-radius: 999px; transition: border-color 160ms, color 160ms }
 a.project-card-status:hover, a.project-card-status:focus-visible { border-color: var(--c); color: var(--c); outline: none }
 .project-card-image { grid-column: 1 / -1; width: 100%; height: auto; max-height: 320px; object-fit: cover; border-radius: 8px; margin-bottom: 8px; box-shadow: 0 4px 16px -6px rgba(0, 0, 0, .25), inset 0 0 0 1px rgba(0, 0, 0, .08); filter: saturate(0.92) contrast(1.03); }
 .project-card-name { font-family: 'Inter var', Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI Variable', system-ui, sans-serif; font-weight: 400; font-size: clamp(30px, 4vw, 46px); line-height: 1; letter-spacing: -.02em }
@@ -174,7 +174,7 @@ a.project-card-status:hover, a.project-card-status:focus-visible { border-color:
 .map-interchange { fill: var(--sheet); stroke: var(--ink); stroke-width: 2.5 }
 .map-station { cursor: pointer; outline: none }
 .map-target { fill: transparent }
-.map-dot { fill: var(--sheet); stroke-width: 3.5; transition: fill .15s }
+.map-dot { fill: var(--sheet); stroke-width: 3.5; transition: fill 160ms }
 .map-station:hover .map-dot, .map-station:focus-visible .map-dot { fill: var(--ink) }
 .map-station:focus-visible .map-target { stroke: var(--accent); stroke-width: 2 }
 .station-bubble {
@@ -241,7 +241,7 @@ h3 { margin: 0; font-size: 18px; letter-spacing: -.01em }
     border-radius: 12px;
     background: var(--card);
     text-decoration: none;
-    transition: border-color .3s;
+    transition: border-color 280ms;
 }
 a.card:hover { border-color: var(--accent) }
 a.card:hover .card-go { color: var(--accent) }
@@ -249,7 +249,7 @@ a.card:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px }
 .card.is-local { opacity: .8 }
 
 .card-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px }
-.card-go { font-family: var(--mono); font-size: 12px; color: var(--muted); transition: color .3s }
+.card-go { font-family: var(--mono); font-size: 12px; color: var(--muted); transition: color 280ms }
 .card-url { font-family: var(--mono); font-size: 12px; color: var(--accent); word-break: break-all }
 .card-meta { margin: 0; font-size: 12px; color: var(--muted) }
 .card-desc { margin: 0 }
@@ -291,7 +291,7 @@ a.project-name:focus-visible { outline: 2px solid var(--accent); outline-offset:
     background: transparent;
     color: var(--muted);
     cursor: pointer;
-    transition: color .2s, border-color .2s, background-color .2s;
+    transition: color 160ms, border-color 160ms, background-color 160ms;
 }
 .chip:hover { color: var(--ink); border-color: var(--ink) }
 .chip[aria-pressed="true"] { color: var(--paper); background: var(--ink); border-color: var(--ink) }
