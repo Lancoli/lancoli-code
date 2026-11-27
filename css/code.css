@@ -1,7 +1,8 @@
 /* LancoliCode — same paper as Lancoli, with a "terminal" accent. A newspaper page: the front page, "At a glance",
    the stacking project cards, the metro map of the log. Nothing moves on hover (border, colour only). */
 :root {
-    --paper: #fbfaf7;
+    --hue: 120;
+    --paper: oklch(97.5% 0.015 var(--hue));
     --sheet: #ffffff;
     --ink: #171717;
     --muted: #6f6a63;
@@ -14,7 +15,7 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --paper: #121211;
+        --paper: oklch(10% 0.005 var(--hue));
         --sheet: #1b1b1a;
         --ink: #ecebe7;
         --muted: #9a958d;
