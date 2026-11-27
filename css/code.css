@@ -117,7 +117,7 @@ h1 em { color: var(--accent) }
 
 .intro { max-width: 70ch; margin: -12px 0 22px; color: var(--muted) }
 
-/* ---- 00 at a glance ---- */
+/* ---- 00 At a glance ---- */
 .summary { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 22px 28px }
 .brief { display: grid; align-content: start; gap: 8px }
 .brief-kind { margin: 0; padding-bottom: 6px; border-bottom: 1px solid var(--ink); font-family: var(--mono); font-size: 11px; text-transform: uppercase; letter-spacing: .08em }

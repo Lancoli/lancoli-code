@@ -1,4 +1,4 @@
-# Politique de sécurité
+# Security Policy
 
-Une faille ? Ne l'ouvrez pas en issue publique : utilisez **Security → Report a vulnerability** sur ce dépôt (signalement privé GitHub).
-Réponse sous 7 jours. Seule la branche `main` est maintenue.
+Found a vulnerability? Do not open it as a public issue: use **Security → Report a vulnerability** on this repository (private GitHub reporting).
+Response within 7 days. Only the `main` branch is maintained.

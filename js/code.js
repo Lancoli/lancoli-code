@@ -30,7 +30,7 @@
     target.appendChild(el('p', 'empty', text));
   }
 
-  // 2026-10-23 → 23 oct. / 23 Oct
+  // 2026-10-23 → 23 Oct / 23 Oct
   const day = (iso) => new Date(iso + 'T12:00:00');
   function short(iso) {
     const d = day(iso);
@@ -81,7 +81,7 @@
     ].map(([v, key]) => { const d = el('div'); d.append(el('dd', null, String(v)), el('dt', null, t(key))); return d; }));
   }
 
-  // ---- 00 at a glance: projects grouped by kind (the order of first appearance)
+  // ---- 00 At a glance: projects grouped by kind (the order of first appearance)
   function renderBrief() {
     const kinds = [];
     projects.forEach((p) => { const k = kindOf(p); if (!kinds.includes(k)) kinds.push(k); });
@@ -271,7 +271,7 @@
     projects.filter((p) => log.some((j) => j.project === p.id)).forEach((p) => chip(p.id, pick(p.name)));
   }
 
-  // ---- the career path: experience then sites built, if filled in journey.js
+  // ---- Career path: experience then sites built, if filled in journey.js
   function renderPath() {
     const exp = $('experiences');
     exp.replaceChildren();
@@ -290,7 +290,7 @@
     $('sites').replaceChildren(...(data.sites || []).map(card));
   }
 
-  // ---- language switch: FR ↔ EN, in the header nav
+  // ---- Language switch: FR ↔ EN, in the header nav
   function renderSwitch() {
     const b = $('lang-switch');
     b.textContent = t('lang.switch');

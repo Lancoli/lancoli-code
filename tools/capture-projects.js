@@ -6,7 +6,7 @@ const { chromium } = require('playwright');
 const fs = require('fs/promises');
 const path = require('path');
 
-// The projects to capture, with their local URLs (through HAL on port 4101)
+// Projects to capture, with their local URLs (through HAL on port 4101)
 const captures = [
   { name: 'lancoli', url: 'http://localhost:4101/Lancoli/', viewport: { width: 1600, height: 900 } },
   { name: 'studio', url: 'http://localhost:4101/LancoliStudio/', viewport: { width: 1600, height: 900 } },
@@ -23,7 +23,7 @@ async function captureProjects() {
   const browser = await chromium.launch({ headless: true });
   const assetsDir = path.join(__dirname, '..', 'assets');
 
-  // Check that the assets folder exists
+  // Check that the assets directory exists
   try {
     await fs.access(assetsDir);
   } catch {
@@ -43,13 +43,13 @@ async function captureProjects() {
       console.log(`📸 Capturing ${project.name}...`);
       console.log(`   URL: ${project.url}`);
 
-      // Load the page with a 30 s timeout
+      // Load the page with a 30s timeout
       await page.goto(project.url, { waitUntil: 'networkidle', timeout: 30000 });
 
-      // Wait a little for the animations to finish
+      // Wait for animations to finish
       await page.waitForTimeout(1500);
 
-      // Take the capture as JPEG, quality 85
+      // Capture as JPEG, quality 85
       await page.screenshot({
         path: file,
         type: 'jpeg',
@@ -79,7 +79,7 @@ async function captureProjects() {
   }
 }
 
-// Run the captures
+// Run captures
 captureProjects().catch((err) => {
   console.error('❌ Fatal error:', err);
   process.exit(1);
