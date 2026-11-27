@@ -1,7 +1,7 @@
 {
   "card.local": "local",
   "door.civic.for": "Collectivités, associations, commerces",
-  "door.civic.what": "Un site à refaire, plus clair pour vos visiteurs ? Parlons-en",
+  "door.civic.what": "Un site à refaire, plus clair pour vos visiteurs ? Parlons-en",
   "door.tech.for": "Équipes tech",
   "door.tech.what": "Les projets, les choix techniques, le journal de bord",
   "figures.online": "à ouvrir ici",
@@ -20,7 +20,7 @@
   "log.empty": "Rien pour l’instant.",
   "map.aria": "Carte des projets : {lines} lignes, {steps} avancées. Le détail est dans le journal plus bas.",
   "map.empty": "La carte se dessine avec le journal.",
-  "map.intro": "Une ligne par projet, une station par avancée. Les correspondances : les jours où plusieurs projets ont bougé ensemble.",
+  "map.intro": "Une ligne par projet, une station par avancée. Les correspondances : les jours où plusieurs projets ont bougé ensemble.",
   "meta.description": "Lancoli côté code : expérience utilisateur, design et développement front. Chaque projet, à quoi il sert, comment il est fait, et le journal de bord.",
   "meta.title": "Lancoli Code — projets et journal de bord",
   "nav.contact": "Contact ↗",
