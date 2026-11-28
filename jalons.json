@@ -51,23 +51,25 @@
       "preuve": "1 fichier(s) non commité(s)",
       "fait": false,
       "auto": true,
-      "fait_le": "2026-11-26T22:37:57.981Z"
+      "fait_le": "2026-11-27T09:21:02.729Z"
     },
     {
       "id": "auto-liens",
       "texte": "N1 · tout ce qui est cité existe (tools/liens.mjs)",
       "pour": "liens",
       "preuve": "9 cassé(s), ex. LancoliCode/js/journey.js → assets/lancoli.jpg",
-      "fait": false,
-      "auto": true
+      "fait": true,
+      "auto": true,
+      "fait_le": "2026-11-27T12:10:37.854Z"
     },
     {
       "id": "auto-console",
       "texte": "N1 · chaque page s'ouvre sans erreur JS ni ressource en erreur",
       "pour": "console",
-      "preuve": "2 erreur(s), ex. index.html : 404 assets/lancoli.jpg (dernier passage)",
-      "fait": false,
-      "auto": true
+      "preuve": "2 erreur(s), ex. index.html : 404 assets/lancoli.jpg",
+      "fait": true,
+      "auto": true,
+      "fait_le": "2026-11-27T12:10:37.854Z"
     },
     {
       "id": "auto-licence",
@@ -89,7 +91,7 @@
     }
   ],
   "etat": {
-    "date": "2026-11-27T04:17:11.643Z",
+    "date": "2026-11-27T12:10:37.854Z",
     "niveau": null,
     "prochain": "N0",
     "bloque": [
@@ -113,7 +115,7 @@
       },
       "readme": {
         "ok": true,
-        "preuve": "1832 caractères",
+        "preuve": "1833 caractères",
         "niveau": "N0",
         "texte": "README : ce que c'est, comment le lancer (≥ 300 caractères)",
         "type": "auto"
@@ -126,15 +128,15 @@
         "type": "auto"
       },
       "liens": {
-        "ok": false,
-        "preuve": "9 cassé(s), ex. LancoliCode/js/journey.js → assets/lancoli.jpg",
+        "ok": true,
+        "preuve": "21 références",
         "niveau": "N1",
         "texte": "tout ce qui est cité existe (tools/liens.mjs)",
         "type": "auto"
       },
       "console": {
-        "ok": false,
-        "preuve": "2 erreur(s), ex. index.html : 404 assets/lancoli.jpg",
+        "ok": true,
+        "preuve": "1 page(s) sans erreur",
         "niveau": "N1",
         "texte": "chaque page s'ouvre sans erreur JS ni ressource en erreur",
         "type": "auto"
@@ -225,7 +227,7 @@
       },
       "e2e": {
         "ok": null,
-        "preuve": "scénario à écrire (champ « test » de jalons.json)",
+        "preuve": "scenario to write (\"test\" field in milestones.json)",
         "niveau": "N3",
         "texte": "le parcours critique passe de bout en bout",
         "type": "auto"
