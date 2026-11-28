@@ -49,9 +49,9 @@
       "texte": "N0 · dépôt git propre (rien en attente de commit)",
       "pour": "git",
       "preuve": "5 fichier(s) non commité(s)",
-      "fait": false,
+      "fait": true,
       "auto": true,
-      "fait_le": "2026-11-27T09:21:02.729Z"
+      "fait_le": "2026-11-28T16:37:16.678Z"
     },
     {
       "id": "auto-liens",
@@ -66,8 +66,8 @@
       "id": "auto-console",
       "texte": "N1 · chaque page s'ouvre sans erreur JS ni ressource en erreur",
       "pour": "console",
-      "preuve": "2 erreur(s), ex. index.html : 404 assets/lancoli.jpg",
-      "fait": true,
+      "preuve": "1 erreur(s), ex. index.html : Unexpected identifier 's' (dernier passage)",
+      "fait": false,
       "auto": true,
       "fait_le": "2026-11-27T12:10:37.854Z"
     },
@@ -91,17 +91,17 @@
     }
   ],
   "etat": {
-    "date": "2026-11-28T14:05:43.886Z",
-    "niveau": null,
-    "prochain": "N0",
+    "date": "2026-11-28T16:37:16.678Z",
+    "niveau": "N0",
+    "prochain": "N1",
     "bloque": [
-      "git"
+      "console"
     ],
     "humain": {},
     "criteres": {
       "git": {
-        "ok": false,
-        "preuve": "5 fichier(s) non commité(s)",
+        "ok": true,
+        "preuve": "propre",
         "niveau": "N0",
         "texte": "dépôt git propre (rien en attente de commit)",
         "type": "auto"
@@ -128,22 +128,22 @@
         "type": "auto"
       },
       "liens": {
-        "ok": false,
-        "preuve": "3 cassé(s), ex. LancoliCode/tools/generate-og-image-playwright.js → og-image.png",
+        "ok": true,
+        "preuve": "23 références",
         "niveau": "N1",
         "texte": "tout ce qui est cité existe (tools/liens.mjs)",
         "type": "auto"
       },
       "console": {
         "ok": false,
-        "preuve": "1 erreur(s), ex. index.html : Unexpected identifier 's'",
+        "preuve": "1 erreur(s), ex. index.html : Unexpected identifier 's' (dernier passage)",
         "niveau": "N1",
         "texte": "chaque page s'ouvre sans erreur JS ni ressource en erreur",
         "type": "auto"
       },
       "mobile": {
         "ok": true,
-        "preuve": "1 page(s) à 375 px",
+        "preuve": "1 page(s) à 375 px (dernier passage)",
         "niveau": "N1",
         "texte": "aucune page plus large que 375 px",
         "type": "auto"
