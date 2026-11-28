@@ -48,7 +48,7 @@
       "id": "auto-git",
       "texte": "N0 · dépôt git propre (rien en attente de commit)",
       "pour": "git",
-      "preuve": "1 fichier(s) non commité(s)",
+      "preuve": "5 fichier(s) non commité(s)",
       "fait": false,
       "auto": true,
       "fait_le": "2026-11-27T09:21:02.729Z"
@@ -91,7 +91,7 @@
     }
   ],
   "etat": {
-    "date": "2026-11-27T12:10:37.854Z",
+    "date": "2026-11-28T14:05:43.886Z",
     "niveau": null,
     "prochain": "N0",
     "bloque": [
@@ -101,7 +101,7 @@
     "criteres": {
       "git": {
         "ok": false,
-        "preuve": "1 fichier(s) non commité(s)",
+        "preuve": "5 fichier(s) non commité(s)",
         "niveau": "N0",
         "texte": "dépôt git propre (rien en attente de commit)",
         "type": "auto"
@@ -128,15 +128,15 @@
         "type": "auto"
       },
       "liens": {
-        "ok": true,
-        "preuve": "21 références",
+        "ok": false,
+        "preuve": "3 cassé(s), ex. LancoliCode/tools/generate-og-image-playwright.js → og-image.png",
         "niveau": "N1",
         "texte": "tout ce qui est cité existe (tools/liens.mjs)",
         "type": "auto"
       },
       "console": {
-        "ok": true,
-        "preuve": "1 page(s) sans erreur",
+        "ok": false,
+        "preuve": "1 erreur(s), ex. index.html : Unexpected identifier 's'",
         "niveau": "N1",
         "texte": "chaque page s'ouvre sans erreur JS ni ressource en erreur",
         "type": "auto"
@@ -170,15 +170,15 @@
         "type": "auto"
       },
       "meta": {
-        "ok": false,
-        "preuve": "1/1 page(s) incomplète(s) — index.html : og:image",
+        "ok": true,
+        "preuve": "1 page(s) complètes",
         "niveau": "N2",
         "texte": "lang, title, description, viewport, favicon, og:image sur chaque page",
         "type": "auto"
       },
       "robots": {
-        "ok": false,
-        "preuve": "robots.txt, sitemap.xml absent(s)",
+        "ok": true,
+        "preuve": "robots.txt, sitemap.xml",
         "niveau": "N2",
         "texte": "SEO technique : robots.txt et sitemap.xml",
         "type": "auto"
