@@ -1,0 +1,27 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fond -->
+  <rect width="1200" height="630" fill="#10140f"/>
+
+  <!-- Marque -->
+  <text x="60" y="100" font-family="sans-serif" font-size="48" font-weight="bold" fill="#e8f0e3">Lancoli</text>
+  <text x="230" y="100" font-family="monospace" font-size="48" fill="#5fb98a">/code</text>
+
+  <!-- Titre principal -->
+  <text x="60" y="220" font-family="sans-serif" font-size="72" font-weight="bold" fill="#e8f0e3">Journal de bord</text>
+
+  <!-- Sous-titre -->
+  <text x="60" y="290" font-family="sans-serif" font-size="36" fill="#e8f0e3" opacity="0.8">Projets · UX · Design · Développement</text>
+
+  <!-- Lignes de journal stylisées -->
+  <!-- Ligne 1 -->
+  <rect x="60" y="380" width="1080" height="50" rx="6" fill="#5fb98a" opacity="0.15"/>
+  <circle cx="90" cy="405" r="8" fill="#5fb98a" opacity="0.9"/>
+
+  <!-- Ligne 2 -->
+  <rect x="60" y="450" width="1080" height="50" rx="6" fill="#5fb98a" opacity="0.25"/>
+  <circle cx="90" cy="475" r="8" fill="#5fb98a" opacity="0.75"/>
+
+  <!-- Ligne 3 -->
+  <rect x="60" y="520" width="1080" height="50" rx="6" fill="#5fb98a" opacity="0.35"/>
+  <circle cx="90" cy="545" r="8" fill="#5fb98a" opacity="0.6"/>
+</svg>
