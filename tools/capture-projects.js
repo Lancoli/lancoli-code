@@ -2,7 +2,8 @@
 // Uses Playwright to open each project and take a capture. Run from LancoliCode/: node tools/capture-projects.js
 // (HAL must be serving the sites on port 4101, and Jondi on 4021).
 
-const { chromium } = require('playwright');
+// Playwright: this folder's install if any, otherwise HAL's (playwright-core, driving the system Edge).
+const { chromium } = (() => { try { return require('playwright'); } catch { return require('../../Hal/node_modules/playwright-core'); } })();
 const fs = require('fs/promises');
 const path = require('path');
 
@@ -14,13 +15,14 @@ const captures = [
   { name: 'jardin', url: 'http://localhost:4101/JardinDeDemain/temps-au-jardin.html', viewport: { width: 1600, height: 900 } },
   { name: 'survie', url: 'http://localhost:4101/Prototypes/calculateur-survie-alimentaire.html', viewport: { width: 1600, height: 900 } },
   { name: 'archive', url: 'http://localhost:4101/ArchiveBotanique/', viewport: { width: 1600, height: 900 } },
+  { name: 'hal', url: 'http://localhost:4100/', viewport: { width: 1600, height: 900 }, hide: '.alerts, .notice' },
   { name: 'code', url: 'http://localhost:4101/LancoliCode/', viewport: { width: 1600, height: 900 } },
 ];
 
 async function captureProjects() {
   console.log('🎬 Starting captures...\n');
 
-  const browser = await chromium.launch({ headless: true });
+  const browser = await chromium.launch({ headless: true, channel: 'msedge' });
   const assetsDir = path.join(__dirname, '..', 'assets');
 
   // Check that the assets directory exists
@@ -45,6 +47,9 @@ async function captureProjects() {
 
       // Load the page with a 30s timeout
       await page.goto(project.url, { waitUntil: 'networkidle', timeout: 30000 });
+
+      // Hide transient overlays (local alerts) that would look broken on a public card
+      if (project.hide) await page.addStyleTag({ content: project.hide + ' { display: none !important; }' });
 
       // Wait for animations to finish
       await page.waitForTimeout(1500);
