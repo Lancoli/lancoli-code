@@ -17,6 +17,7 @@
   "front.title.2": "at first glance.",
   "kind.other": "Other",
   "lang.switch": "Français",
+  "lang.switch_label": "Switch to French",
   "log.empty": "Nothing yet.",
   "map.aria": "Project map: {lines} lines, {steps} steps. The detail is in the log below.",
   "map.empty": "The map draws itself from the log.",
