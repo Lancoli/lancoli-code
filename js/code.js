@@ -119,6 +119,8 @@
         img.src = p.image;
         img.alt = t('project.image_alt', { name: pick(p.name) });
         img.loading = 'lazy';
+        img.width = 1600;
+        img.height = 900;
         f.appendChild(img);
       }
       const left = el('div', 'project-card-left');
